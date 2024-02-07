@@ -11,6 +11,7 @@ body {
     background-color: #fff;
     max-width: 1440px;
 }
+
 p, h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 0;
@@ -62,7 +63,8 @@ img {
   
 .header {
     border-bottom: 1px solid #e7e9fc;
-}
+  }
+
   .container-header {
     display: flex;
     align-items: center;
@@ -101,13 +103,14 @@ img {
     padding-top: 24px;
     padding-bottom: 24px;
     margin-right: 76px;
-        }
+    }
 
     .studio {
         color: #2E2F42;
     }
+
       
-    .nav-link {
+    .nav-link {  
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -116,6 +119,22 @@ img {
     color: #2E2F42;
     padding-top: 24px;
     padding-bottom: 24px;
+    
+    }
+    .current {
+        position:relative;
+        color: #404bbf;
+    }
+
+    .current::after {
+        position: absolute;
+        content: "";
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: #404bbf;
     }
 
     .nav-link:hover, .nav-link:focus, .contacts-link:hover, .contacts-link:focus{
@@ -133,8 +152,8 @@ img {
     letter-spacing: 0.02em;
     color: #434455;
     padding-top: 24px;
-    padding-bottom: 24px;
-        }
+    padding-bottom: 24px;}
+
 
 /* ====================================== */
 
@@ -142,7 +161,11 @@ img {
 
 .hero {
   
-    background: #2E2F42;
+    background-color: rgba(46, 47, 66, 0.7);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),url(../images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding-top: 188px;
     padding-bottom: 188px;
     }
@@ -188,15 +211,11 @@ img {
 
 /* ===================================advantages=========================================== */
 
-/* .advantages {
-    padding-top: 120px;
-    padding-bottom: 120px; */
-/* } */
-
 .advantages-list {
     display: flex;
     gap: 24px;
 }
+
 .advantages-item {
     width: calc((100% - 72px) / 4);
 }
@@ -217,6 +236,14 @@ img {
     letter-spacing: 0.02em;
 }
 
+.advantages-item-icon {
+    padding: 24px 100px;
+    margin-bottom: 8px;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    background-color: #f4f4fd;
+}
+
 /* ================================================================================================= */
 
 /* ==========================================team========================================= */
@@ -233,13 +260,13 @@ img {
 }
 
 .team-item-text {
-padding-top: 32px;
-padding-bottom: 32px;
+padding: 32px 16px;
 }
 
 .team-item {
     background: #fff;
     border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .team-title {
@@ -264,11 +291,38 @@ padding-bottom: 32px;
 
 .team-unit-text {
     font-size: 16px;
-    font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.02em;
     text-align: center;
+    margin-bottom: 8px;
 }
+
+.list-icon {
+    display: flex;
+    justify-content: center;
+    gap: 24px; 
+}
+
+.item-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.link-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+}
+
+.icon {
+
+    fill:#fff;  
+}
+
 
 /* ============================================================================================ */
 
@@ -276,6 +330,7 @@ padding-bottom: 32px;
 .section-portfolio {
     background-color: #fff;
 }
+
 .portfolio-list {
 display: flex;
 flex-wrap: wrap;
@@ -299,6 +354,11 @@ row-gap: 48px;
     border-left: 1px solid #E7E9FC;
     border-right: 1px solid #E7E9FC;
     border-bottom: 1px solid #E7E9FC;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-item {
+    cursor: pointer;
 }
 .portfolio-unit-title {
     color: #2E2F42;
@@ -342,5 +402,22 @@ footer .logo-link {
     margin-bottom: 16px;
 }
 
+.footer-container {
+    display: flex;
+    gap: 120px;
+}
 
-/* ==================================================================================================== */width: Hug (264px)
+.social-media {
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #fff;
+margin-bottom: 16px;
+}
+
+footer .link-icon:hover {
+    background-color: #31d0aa;
+}
+
+/* ==================================================================================================== */
